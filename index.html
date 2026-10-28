@@ -2,268 +2,19 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Fernando Contabilidad - Servicios contables, fiscales y asesoría financiera empresarial">
-    <meta name="keywords" content="Contabilidad, Finanzas, Impuestos, Asesoría, Auditoría, Fernando Contabilidad">
+    <meta name="description" content="Fernando Contabilidad - Servicios contables y asesoría financiera">
+    <meta name="keywords" content="Contabilidad, Finanzas, Impuestos, Asesoría, Fernando Contabilidad">
     <meta name="author" content="Fernando Pérez Torres">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- FontAwesome para los íconos de redes, mapas y teléfono -->
+    <!-- Vinculación a style.css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome para íconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Fernando Contabilidad | Asesoría Financiera</title>
-    
-    <style>
-        /* RESETEO GENERAL */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            line-height: 1.6;
-            color: #333333;
-            background-color: #ffffff;
-            font-family: 'Fredoka', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            overflow-x: hidden;
-        }
-
-        /* 1. ENCABEZADO MORADO / AZUL (Header) */
-        .headerTechiY {
-            background: #251D82;
-            color: white;
-            padding: 0.8rem 2rem;
-            display: flex;
-            position: relative;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            z-index: 1000;
-        }
-
-        /* LOGO CIRCULAR */
-        .headerTechiY .logo {
-            background-color: #ffffff;
-            width: 65px;
-            height: 65px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .headerTechiY .logo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* MENÚ NAVEGACIÓN (Botones píldora celestes) */
-        .nav ul {
-            display: flex;
-            list-style: none;
-            gap: 12px;
-        }
-
-        .nav-button {
-            color: #251D82;
-            background-color: #b9ddff;
-            padding: 8px 20px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-        }
-
-        .nav-button:hover {
-            background-color: #ffffff;
-            color: #251D82;
-            transform: translateY(-2px);
-        }
-
-        /* 2. SECCIÓN HERO (Video ajustado en pantalla) */
-        .hero-fundacion {
-            position: relative;
-            width: 100%;
-            height: 400px;
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-            padding-bottom: 25px;
-            overflow: hidden;
-        }
-
-        .video-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-        }
-
-        .video-background video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* BOTONES DE ACCIÓN SOBRE EL VIDEO */
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            width: 100%;
-        }
-
-        .hero-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        .btn {
-            display: inline-block;
-            background: #251D82;
-            color: white;
-            padding: 0.6rem 1.8rem;
-            border: 3px solid #b9ddff;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: background 0.3s, border-color 0.3s;
-        }
-
-        .btn:hover {
-            background: transparent;
-            color: #b9ddff;
-            border-color: #251D82;
-        }
-
-        /* 3. SECCIÓN CENTRAL CELESTE (Fundación / Empresa) */
-        main section.fundacion {
-            background-color: #b9ddff;
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        .fundacion h2 {
-            margin-bottom: 15px;
-            color: #251D82;
-            font-size: 1.8rem;
-            font-weight: 700;
-        }
-
-        .fundacion .content {
-            max-width: 750px;
-            margin: 0 auto;
-            color: #251D82;
-            font-size: 1rem;
-        }
-
-        /* 4. PIE DE PÁGINA MORADO (Footer) */
-        footer, #contacto-funTechIY {
-            background-color: #251D82;
-            color: #ffffff;
-            padding: 30px 20px 15px;
-            text-align: center;
-            font-family: 'Fredoka', sans-serif;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
-            max-width: 800px;
-            margin: 0 auto 15px;
-            text-align: left;
-        }
-
-        @media (min-width: 768px) {
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        .contacto h3, .redes-sociales h3 {
-            font-size: 1.1rem;
-            margin-bottom: 10px;
-            color: #ffffff;
-        }
-
-        .contacto address p {
-            margin: 6px 0;
-            font-size: 0.9rem;
-        }
-
-        .contacto a {
-            color: #b9ddff;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .contacto a:hover {
-            text-decoration: underline;
-            color: #ffffff;
-        }
-
-        .redes-iconos a {
-            color: #ffffff;
-            margin-right: 15px;
-            font-size: 22px;
-            transition: color 0.3s, transform 0.3s;
-            display: inline-block;
-        }
-
-        .redes-iconos a:hover {
-            color: #b9ddff;
-            transform: scale(1.15);
-        }
-
-        .footer-bottom {
-            border-top: 1px solid rgba(185, 221, 255, 0.3);
-            padding-top: 15px;
-            position: relative;
-        }
-
-        .scroll-to-top-btn {
-            background-color: #b9ddff;
-            border: none;
-            color: #251D82;
-            width: 35px;
-            height: 35px;
-            border-radius: 50%;
-            cursor: pointer;
-            position: absolute;
-            top: -18px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: all 0.3s ease;
-        }
-
-        .scroll-to-top-btn:hover {
-            background-color: #ffffff;
-            transform: translateX(-50%) scale(1.1);
-        }
-
-        .copyright {
-            font-size: 0.75rem;
-            color: #ffffff;
-        }
-    </style>
 </head>
 <body>
 
-    <!-- Header / Menú -->
+    <!-- Header Morado / Azul Oscuro -->
     <header class="headerTechiY">
         <div class="logo">
             <img src="img/logo.jpeg" alt="Logo Fernando Contabilidad">
@@ -272,8 +23,8 @@
         <nav class="nav">
             <ul>
                 <li><a href="#inicio" class="nav-button">Inicio</a></li>
-                <li><a href="#fundacion" class="nav-button">Empresa</a></li>
-                <li><a href="#servicios" class="nav-button">Servicios</a></li>
+                <li><a href="#fundacion" class="nav-button">Acerca de nosotros</a></li>
+                <li><a href="#programas" class="nav-button">Inversiones</a></li>
                 <li><a href="#contacto-funTechIY" class="nav-button">Contacto</a></li>
             </ul>
         </nav>
@@ -290,23 +41,85 @@
             </div>
 
             <div class="hero-content">
+                <div class="welcome-box">
+                    <h2>Bienvenidos</h2>
+                </div>
                 <div class="hero-buttons">
-                    <a href="#servicios" class="btn">Servicios</a>
+                    <a href="#programas" class="btn">Inversiones</a>
                     <a href="#contacto-funTechIY" class="btn">Contacto</a>
                 </div>
             </div>
         </section>
 
-        <!-- Sección Empresa / Quiénes Somos -->
+        <!-- Sección Empresa / Acerca de Nosotros -->
         <section id="fundacion" class="fundacion">
-            <h2>Empresa</h2>
+            <h2>Acerca de nosotros</h2>
             <div class="content">
                 <p>Fernando Contabilidad es una firma dirigida por Fernando Pérez Torres dedicada a brindar asesoría financiera, contable y fiscal integral para optimizar tus recursos y hacer crecer tu negocio.</p>
             </div>
         </section>
+
+        <!-- Sección de Cursos y Servicios con Filtros -->
+        <section id="programas" class="programas">
+            <h2>Conoce nuestros cursos para principiantes</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn" data-category="todos">Todos</button>
+                <button class="filter-btn active" data-category="principiantes">Principiantes</button>
+                <button class="filter-btn" data-category="inversiones">Tus Inversiones</button>
+            </div>
+
+            <!-- Contenedor exacto de 4 Tarjetas -->
+            <div id="programa-container" class="cards-grid">
+                
+                <!-- Card 1 -->
+                <figure class="proyecto-card">
+                    <div class="img-container">
+                        <img src="img/imagen1.jpg" alt="Cursos para principiantes 1">
+                    </div>
+                    <figcaption>Cursos para principiantes</figcaption>
+                    <div class="card-description">
+                        <p>Buscamos ayudar a quien no sabe, pero también enseñar a quienes están interesados en hacerlo ellos mismos.</p>
+                    </div>
+                </figure>
+
+                <!-- Card 2 -->
+                <figure class="proyecto-card">
+                    <div class="img-container">
+                        <img src="img/imagen2.jpg" alt="Cursos para principiantes 2">
+                    </div>
+                    <figcaption>Cursos para principiantes</figcaption>
+                    <div class="card-description">
+                        <p>Buscamos ayudar a quien no sabe, pero también enseñar a quienes están interesados en hacerlo ellos mismos.</p>
+                    </div>
+                </figure>
+
+                <!-- Card 3 -->
+                <figure class="proyecto-card">
+                    <div class="img-container">
+                        <img src="img/imagen3.jpg" alt="Cursos para principiantes 3">
+                    </div>
+                    <figcaption>Cursos para principiantes</figcaption>
+                    <div class="card-description">
+                        <p>Buscamos ayudar a quien no sabe, pero también enseñar a quienes están interesados en hacerlo ellos mismos.</p>
+                    </div>
+                </figure>
+
+                <!-- Card 4 -->
+                <figure class="proyecto-card">
+                    <div class="img-container">
+                        <img src="img/imagen4.jpg" alt="Cursos para principiantes 4">
+                    </div>
+                    <figcaption>Cursos para principiantes</figcaption>
+                    <div class="card-description">
+                        <p>Buscamos ayudar a quien no sabe, pero también enseñar a quienes están interesados en hacerlo ellos mismos.</p>
+                    </div>
+                </figure>
+
+            </div>
+        </section>
     </main>
 
-    <!-- Pie de Página (Contacto, Redes y WhatsApp) -->
+    <!-- Footer Morado alineado en 2 columnas legibles -->
     <footer id="contacto-funTechIY">
         <div class="footer-grid">
             <div class="contacto">
@@ -314,17 +127,18 @@
                 <address>
                     <p>
                         <i class="fa fa-map-marker-alt"></i>
-                        <a href="https://maps.google.com/?q=Plaza+Satélite+Naucalpan" target="_blank" rel="noreferrer noopener">
-                            <span style="color: #b9ddff; font-weight: bold">Ubicación: </span> Plaza Satélite, C. Circuito Centro Comercial 2251, Ciudad Satélite, 53100 Naucalpan de Juárez, Méx.
-                        </a>
+                        <span class="label">Ubicación:</span>
+                        <a href="https://maps.google.com/?q=Plaza+Satélite+Naucalpan" target="_blank" rel="noreferrer noopener">Plaza Satélite, Naucalpan de Juárez, Méx.</a>
                     </p>
                     <p>
                         <i class="fa fa-phone"></i>
-                        <span style="color: #b9ddff; font-weight: bold">Teléfono: </span> <a href="tel:+525610510602">56 1051 0602</a>
+                        <span class="label">Teléfono:</span>
+                        <a href="tel:+525610510602">56 1051 0602</a>
                     </p>
                     <p>
                         <i class="fab fa-whatsapp"></i>
-                        <span style="color: #b9ddff; font-weight: bold">WhatsApp: </span> <a href="https://wa.me/525610510602?text=Hola,%20necesito%20información%20sobre%20servicios%20contables" target="_blank" rel="noreferrer noopener">Enviar mensaje por WhatsApp</a>
+                        <span class="label">WhatsApp:</span>
+                        <a href="https://wa.me/525610510602?text=Hola,%20necesito%20información%20sobre%20servicios%20contables" target="_blank" rel="noreferrer noopener">Enviar mensaje por WhatsApp</a>
                     </p>
                 </address>
             </div>
