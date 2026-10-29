@@ -6,15 +6,13 @@
     <meta name="keywords" content="Contabilidad, Finanzas, Impuestos, Asesoría, Fernando Contabilidad">
     <meta name="author" content="Fernando Pérez Torres">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Vinculación a style.css -->
     <link rel="stylesheet" href="style.css">
-    <!-- FontAwesome para íconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Fernando Contabilidad | Asesoría Financiera</title>
 </head>
 <body>
 
-    <!-- Header Morado / Azul Oscuro -->
+    <!-- Header / Menú -->
     <header class="headerTechiY">
         <div class="logo">
             <img src="img/logo.jpeg" alt="Logo Fernando Contabilidad">
@@ -31,7 +29,7 @@
     </header>
 
     <main>
-        <!-- Banner con Video -->
+        <!-- Banner Hero con Video -->
         <section id="inicio" class="hero-fundacion">
             <div class="video-background">
                 <video autoplay muted loop playsinline>
@@ -59,57 +57,101 @@
             </div>
         </section>
 
-        <!-- Sección de Cursos y Servicios con Filtros -->
+        <!-- Sección de Programas / Cursos -->
         <section id="programas" class="programas">
             <h2>Conoce nuestros cursos para principiantes</h2>
             <div class="filter-buttons">
-                <button class="filter-btn" data-category="todos">Todos</button>
-                <button class="filter-btn active" data-category="principiantes">Principiantes</button>
-                <button class="filter-btn" data-category="inversiones">Tus Inversiones</button>
+                <button class="filter-btn active" data-category="all">Todos</button>
+                <button class="filter-btn" data-category="proyectos">Proyectos</button>
+                <button class="filter-btn" data-category="unete">Únete</button>
             </div>
 
-            <!-- Contenedor exacto de 4 Tarjetas -->
+            <!-- Contenedor con las 8 imágenes reales -->
             <div id="programa-container" class="cards-grid">
                 
                 <!-- Card 1 -->
-                <figure class="proyecto-card">
+                <figure class="proyecto-card" data-gender="proyectos">
                     <div class="img-container">
-                        <img src="img/imagen1.jpg" alt="Cursos para principiantes 1">
+                        <img src="img/imagen1.jpg" alt="Gestión Contable Integral">
                     </div>
-                    <figcaption>Cursos para principiantes</figcaption>
+                    <figcaption>Gestión Contable Integral</figcaption>
                     <div class="card-description">
                         <p>Buscamos ayudar a quien no sabe, pero también enseñar a quienes están interesados en hacerlo ellos mismos.</p>
                     </div>
                 </figure>
 
                 <!-- Card 2 -->
-                <figure class="proyecto-card">
+                <figure class="proyecto-card" data-gender="proyectos">
                     <div class="img-container">
-                        <img src="img/imagen2.jpg" alt="Cursos para principiantes 2">
+                        <img src="img/imagen2.jpg" alt="Asesoría Fiscal y Tributaria">
                     </div>
-                    <figcaption>Cursos para principiantes</figcaption>
+                    <figcaption>Asesoría Fiscal y Tributaria</figcaption>
                     <div class="card-description">
                         <p>Buscamos ayudar a quien no sabe, pero también enseñar a quienes están interesados en hacerlo ellos mismos.</p>
                     </div>
                 </figure>
 
                 <!-- Card 3 -->
-                <figure class="proyecto-card">
+                <figure class="proyecto-card" data-gender="proyectos">
                     <div class="img-container">
-                        <img src="img/imagen3.jpg" alt="Cursos para principiantes 3">
+                        <img src="img/imagen3.jpg" alt="Cálculo y Declaración de Impuestos">
                     </div>
-                    <figcaption>Cursos para principiantes</figcaption>
+                    <figcaption>Cálculo y Declaración de Impuestos</figcaption>
                     <div class="card-description">
                         <p>Buscamos ayudar a quien no sabe, pero también enseñar a quienes están interesados en hacerlo ellos mismos.</p>
                     </div>
                 </figure>
 
                 <!-- Card 4 -->
-                <figure class="proyecto-card">
+                <figure class="proyecto-card" data-gender="proyectos">
                     <div class="img-container">
-                        <img src="img/imagen4.jpg" alt="Cursos para principiantes 4">
+                        <img src="img/imagen4.jpg" alt="Finanzas Personales y Pymes">
                     </div>
-                    <figcaption>Cursos para principiantes</figcaption>
+                    <figcaption>Finanzas Personales y Pymes</figcaption>
+                    <div class="card-description">
+                        <p>Buscamos ayudar a quien no sabe, pero también enseñar a quienes están interesados en hacerlo ellos mismos.</p>
+                    </div>
+                </figure>
+
+                <!-- Card 5 -->
+                <figure class="proyecto-card" data-gender="unete">
+                    <div class="img-container">
+                        <img src="img/imagen5.jpg" alt="Auditoría e Inversiones">
+                    </div>
+                    <figcaption>Auditoría e Inversiones</figcaption>
+                    <div class="card-description">
+                        <p>Buscamos ayudar a quien no sabe, pero también enseñar a quienes están interesados en hacerlo ellos mismos.</p>
+                    </div>
+                </figure>
+
+                <!-- Card 6 -->
+                <figure class="proyecto-card" data-gender="unete">
+                    <div class="img-container">
+                        <img src="img/imagen6.jpg" alt="Estrategia de Pagos y Nómina">
+                    </div>
+                    <figcaption>Estrategia de Pagos y Nómina</figcaption>
+                    <div class="card-description">
+                        <p>Buscamos ayudar a quien no sabe, pero también enseñar a quienes están interesados en hacerlo ellos mismos.</p>
+                    </div>
+                </figure>
+
+                <!-- Card 7 -->
+                <figure class="proyecto-card" data-gender="unete">
+                    <div class="img-container">
+                        <img src="img/imagen7.jpg" alt="Consultoría de Negocios">
+                    </div>
+                    <figcaption>Consultoría de Negocios</figcaption>
+                    <div class="card-description">
+                        <p>Buscamos ayudar a quien no sabe, pero también enseñar a quienes están interesados en hacerlo ellos mismos.</p>
+                    </div>
+                </figure>
+
+                <!-- Card 8 -->
+                <figure class="proyecto-card" data-gender="unete">
+                    <div class="img-container">
+                        <img src="img/imagen8.jpg" alt="Planeación Financiera Avanzada">
+                    </div>
+                    <figcaption>Planeación Financiera Avanzada</figcaption>
                     <div class="card-description">
                         <p>Buscamos ayudar a quien no sabe, pero también enseñar a quienes están interesados en hacerlo ellos mismos.</p>
                     </div>
@@ -119,7 +161,7 @@
         </section>
     </main>
 
-    <!-- Footer Morado alineado en 2 columnas legibles -->
+    <!-- Pie de Página -->
     <footer id="contacto-funTechIY">
         <div class="footer-grid">
             <div class="contacto">
@@ -167,5 +209,6 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     </script>
+    <script src="script.js"></script>
 </body>
 </html>

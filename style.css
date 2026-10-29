@@ -17,7 +17,7 @@ body {
     overflow-x: hidden;
 }
 
-/* 1. ENCABEZADO PRINCIPAL (Morado Oscuro #251D82) */
+/* 1. ENCABEZADO PRINCIPAL (#251D82) */
 .headerTechiY {
     background: #251D82;
     color: #ffffff;
@@ -29,7 +29,6 @@ body {
     z-index: 1000;
 }
 
-/* LOGO CIRCULAR */
 .headerTechiY .logo {
     background-color: #ffffff;
     width: 65px;
@@ -48,7 +47,6 @@ body {
     object-fit: cover;
 }
 
-/* MENÚ DE NAVEGACIÓN (Botones Celeste Pastel) */
 .nav ul {
     display: flex;
     list-style: none;
@@ -144,7 +142,7 @@ body {
     border-color: #251D82;
 }
 
-/* 3. SECCIÓN ACERCA DE NOSOTROS (Fondo Celeste Claro) */
+/* 3. SECCIÓN ACERCA DE NOSOTROS */
 main section.fundacion {
     background-color: #d0e6ff;
     padding: 45px 20px;
@@ -165,7 +163,7 @@ main section.fundacion {
     font-size: 1rem;
 }
 
-/* 4. SECCIÓN CURSOS / PROGRAMAS (Fondo Azul Pastel) */
+/* 4. SECCIÓN PROGRAMAS / GALERÍA */
 section.programas {
     background-color: #b9ddff;
     padding: 50px 20px 70px;
@@ -179,7 +177,6 @@ section.programas h2 {
     font-weight: 700;
 }
 
-/* BOTONES DE FILTRO */
 .filter-buttons {
     display: flex;
     justify-content: center;
@@ -206,23 +203,33 @@ section.programas h2 {
     border-color: #251D82;
 }
 
-/* GRID DE 4 CARDS ALINEADAS */
+/* GRID DE 4 COLUMNAS EN ESCRITORIO */
 .cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-    gap: 20px;
-    max-width: 1100px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    max-width: 1200px;
     margin: 0 auto;
-    align-items: stretch;
 }
 
-/* ESTILO DE CADA TARJETA */
+@media (max-width: 992px) {
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 .proyecto-card {
     background-color: #ffffff;
     border: 2px solid #a8e6cf;
-    border-radius: 16px;
-    padding: 15px;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    border-radius: 14px;
+    padding: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -230,45 +237,45 @@ section.programas h2 {
 }
 
 .proyecto-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
 }
 
 .img-container {
     width: 100%;
-    height: 160px;
+    height: 140px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #ffffff;
-    border-radius: 10px;
+    border-radius: 8px;
     overflow: hidden;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 .img-container img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    border-radius: 10px;
+    border-radius: 8px;
     display: block;
 }
 
 .proyecto-card figcaption {
     font-weight: 700;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     color: #251D82;
-    margin-bottom: 8px;
-    line-height: 1.3;
+    margin-bottom: 6px;
+    line-height: 1.2;
 }
 
 .card-description {
     color: #555555;
-    font-size: 0.8rem;
-    line-height: 1.4;
+    font-size: 0.78rem;
+    line-height: 1.35;
 }
 
-/* 5. FOOTER ALINEADO EN DUAL COLUMN Y COLORES ULTRA VISIBLES */
+/* 5. FOOTER ALINEADO Y LEGIBLE */
 footer, #contacto-funTechIY {
     background-color: #251D82;
     color: #ffffff;
@@ -330,7 +337,6 @@ footer, #contacto-funTechIY {
     margin-right: 4px;
 }
 
-/* Enlaces celestes brillantes para visibilidad alta */
 .contacto a {
     color: #b9ddff;
     text-decoration: none;
