@@ -1,4 +1,3 @@
-/* RESETEO GENERAL */
 * {
     margin: 0;
     padding: 0;
@@ -17,7 +16,6 @@ body {
     overflow-x: hidden;
 }
 
-/* 1. ENCABEZADO PRINCIPAL (#251D82) */
 .headerTechiY {
     background: #251D82;
     color: #ffffff;
@@ -70,7 +68,6 @@ body {
     transform: translateY(-2px);
 }
 
-/* 2. SECCIÓN HERO (Video) */
 .hero-fundacion {
     position: relative;
     width: 100%;
@@ -142,7 +139,6 @@ body {
     border-color: #251D82;
 }
 
-/* 3. SECCIÓN ACERCA DE NOSOTROS */
 main section.fundacion {
     background-color: #d0e6ff;
     padding: 45px 20px;
@@ -163,7 +159,6 @@ main section.fundacion {
     font-size: 1rem;
 }
 
-/* 4. SECCIÓN PROGRAMAS / GALERÍA */
 section.programas {
     background-color: #b9ddff;
     padding: 50px 20px 70px;
@@ -203,7 +198,6 @@ section.programas h2 {
     border-color: #251D82;
 }
 
-/* GRID DE 4 COLUMNAS EN ESCRITORIO */
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -275,7 +269,6 @@ section.programas h2 {
     line-height: 1.35;
 }
 
-/* 5. FOOTER ALINEADO Y LEGIBLE */
 footer, #contacto-funTechIY {
     background-color: #251D82;
     color: #ffffff;

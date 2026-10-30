@@ -2,213 +2,354 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+
     <meta name="description" content="Fernando Contabilidad - Servicios contables y asesoría financiera">
     <meta name="keywords" content="Contabilidad, Finanzas, Impuestos, Asesoría, Fernando Contabilidad">
     <meta name="author" content="Fernando Pérez Torres">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <title>Fernando Contabilidad | Asesoría Financiera</title>
 </head>
+
 <body>
 
-    <!-- Header / Menú -->
+    <!-- =========================
+         HEADER
+    ========================== -->
     <header class="headerTechiY">
+
         <div class="logo">
-            <img src="img/logo.jpeg" alt="Logo Fernando Contabilidad">
+            <img
+                src="img/logo.jpeg"
+                alt="Fernando Contabilidad"
+            >
         </div>
 
         <nav class="nav">
             <ul>
-                <li><a href="#inicio" class="nav-button">Inicio</a></li>
-                <li><a href="#fundacion" class="nav-button">Acerca de nosotros</a></li>
-                <li><a href="#programas" class="nav-button">Inversiones</a></li>
-                <li><a href="#contacto-funTechIY" class="nav-button">Contacto</a></li>
+                <li>
+                    <a href="#inicio" class="nav-button">Inicio</a>
+                </li>
+
+                <li>
+                    <a href="#fundacion" class="nav-button">
+                        Acerca de nosotros
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#programas" class="nav-button">
+                        Inversiones
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contacto-funTechIY" class="nav-button">
+                        Contacto
+                    </a>
+                </li>
             </ul>
         </nav>
+
     </header>
 
+
     <main>
-        <!-- Banner Hero con Video -->
+
+        <!-- =========================
+             HERO
+        ========================== -->
         <section id="inicio" class="hero-fundacion">
+
             <div class="video-background">
+
                 <video autoplay muted loop playsinline>
-                    <source src="video/video.mp4" type="video/mp4">
-                    Tu navegador no soporta video en HTML5.
+                    <source
+                        src="video/video.mp4"
+                        type="video/mp4"
+                    >
+
+                    Tu navegador no soporta video HTML5.
+
                 </video>
+
             </div>
 
+
             <div class="hero-content">
+
                 <div class="welcome-box">
                     <h2>Bienvenidos</h2>
                 </div>
+
+
                 <div class="hero-buttons">
-                    <a href="#programas" class="btn">Inversiones</a>
-                    <a href="#contacto-funTechIY" class="btn">Contacto</a>
+
+                    <a
+                        href="#programas"
+                        class="btn"
+                    >
+                        Inversiones
+                    </a>
+
+                    <a
+                        href="#contacto-funTechIY"
+                        class="btn"
+                    >
+                        Contacto
+                    </a>
+
                 </div>
+
             </div>
+
         </section>
 
-        <!-- Sección Empresa / Acerca de Nosotros -->
-        <section id="fundacion" class="fundacion">
+
+        <!-- =========================
+             ACERCA DE NOSOTROS
+        ========================== -->
+        <section
+            id="fundacion"
+            class="fundacion"
+        >
+
             <h2>Acerca de nosotros</h2>
+
             <div class="content">
-                <p>Fernando Contabilidad es una firma dirigida por Fernando Pérez Torres dedicada a brindar asesoría financiera, contable y fiscal integral para optimizar tus recursos y hacer crecer tu negocio.</p>
+
+                <p>
+                    Fernando Contabilidad es una firma dirigida por
+                    Fernando Pérez Torres dedicada a brindar asesoría
+                    financiera, contable y fiscal integral para optimizar
+                    tus recursos y hacer crecer tu negocio.
+                </p>
+
             </div>
+
         </section>
 
-        <!-- Sección de Programas / Cursos -->
-        <section id="programas" class="programas">
-            <h2>Conoce nuestros cursos para principiantes</h2>
+
+        <!-- =========================
+             PROGRAMAS / CURSOS
+        ========================== -->
+        <section
+            id="programas"
+            class="programas"
+        >
+
+            <h2>
+                Conoce nuestros cursos para principiantes
+            </h2>
+
+
+            <!-- BOTONES DE FILTRO -->
             <div class="filter-buttons">
-                <button class="filter-btn active" data-category="all">Todos</button>
-                <button class="filter-btn" data-category="proyectos">Proyectos</button>
-                <button class="filter-btn" data-category="unete">Únete</button>
-            </div>
 
-            <!-- Contenedor con las 8 imágenes reales -->
-            <div id="programa-container" class="cards-grid">
-                
-                <!-- Card 1 -->
-                <figure class="proyecto-card" data-gender="proyectos">
-                    <div class="img-container">
-                        <img src="img/imagen1.jpg" alt="Gestión Contable Integral">
-                    </div>
-                    <figcaption>Gestión Contable Integral</figcaption>
-                    <div class="card-description">
-                        <p>Buscamos ayudar a quien no sabe, pero también enseñar a quienes están interesados en hacerlo ellos mismos.</p>
-                    </div>
-                </figure>
+                <button
+                    class="filter-btn active"
+                    data-category="all"
+                    type="button"
+                >
+                    Todos
+                </button>
 
-                <!-- Card 2 -->
-                <figure class="proyecto-card" data-gender="proyectos">
-                    <div class="img-container">
-                        <img src="img/imagen2.jpg" alt="Asesoría Fiscal y Tributaria">
-                    </div>
-                    <figcaption>Asesoría Fiscal y Tributaria</figcaption>
-                    <div class="card-description">
-                        <p>Buscamos ayudar a quien no sabe, pero también enseñar a quienes están interesados en hacerlo ellos mismos.</p>
-                    </div>
-                </figure>
+                <button
+                    class="filter-btn"
+                    data-category="proyectos"
+                    type="button"
+                >
+                    Proyectos
+                </button>
 
-                <!-- Card 3 -->
-                <figure class="proyecto-card" data-gender="proyectos">
-                    <div class="img-container">
-                        <img src="img/imagen3.jpg" alt="Cálculo y Declaración de Impuestos">
-                    </div>
-                    <figcaption>Cálculo y Declaración de Impuestos</figcaption>
-                    <div class="card-description">
-                        <p>Buscamos ayudar a quien no sabe, pero también enseñar a quienes están interesados en hacerlo ellos mismos.</p>
-                    </div>
-                </figure>
-
-                <!-- Card 4 -->
-                <figure class="proyecto-card" data-gender="proyectos">
-                    <div class="img-container">
-                        <img src="img/imagen4.jpg" alt="Finanzas Personales y Pymes">
-                    </div>
-                    <figcaption>Finanzas Personales y Pymes</figcaption>
-                    <div class="card-description">
-                        <p>Buscamos ayudar a quien no sabe, pero también enseñar a quienes están interesados en hacerlo ellos mismos.</p>
-                    </div>
-                </figure>
-
-                <!-- Card 5 -->
-                <figure class="proyecto-card" data-gender="unete">
-                    <div class="img-container">
-                        <img src="img/imagen5.jpg" alt="Auditoría e Inversiones">
-                    </div>
-                    <figcaption>Auditoría e Inversiones</figcaption>
-                    <div class="card-description">
-                        <p>Buscamos ayudar a quien no sabe, pero también enseñar a quienes están interesados en hacerlo ellos mismos.</p>
-                    </div>
-                </figure>
-
-                <!-- Card 6 -->
-                <figure class="proyecto-card" data-gender="unete">
-                    <div class="img-container">
-                        <img src="img/imagen6.jpg" alt="Estrategia de Pagos y Nómina">
-                    </div>
-                    <figcaption>Estrategia de Pagos y Nómina</figcaption>
-                    <div class="card-description">
-                        <p>Buscamos ayudar a quien no sabe, pero también enseñar a quienes están interesados en hacerlo ellos mismos.</p>
-                    </div>
-                </figure>
-
-                <!-- Card 7 -->
-                <figure class="proyecto-card" data-gender="unete">
-                    <div class="img-container">
-                        <img src="img/imagen7.jpg" alt="Consultoría de Negocios">
-                    </div>
-                    <figcaption>Consultoría de Negocios</figcaption>
-                    <div class="card-description">
-                        <p>Buscamos ayudar a quien no sabe, pero también enseñar a quienes están interesados en hacerlo ellos mismos.</p>
-                    </div>
-                </figure>
-
-                <!-- Card 8 -->
-                <figure class="proyecto-card" data-gender="unete">
-                    <div class="img-container">
-                        <img src="img/imagen8.jpg" alt="Planeación Financiera Avanzada">
-                    </div>
-                    <figcaption>Planeación Financiera Avanzada</figcaption>
-                    <div class="card-description">
-                        <p>Buscamos ayudar a quien no sabe, pero también enseñar a quienes están interesados en hacerlo ellos mismos.</p>
-                    </div>
-                </figure>
+                <button
+                    class="filter-btn"
+                    data-category="unete"
+                    type="button"
+                >
+                    Únete
+                </button>
 
             </div>
+
+
+            <!--
+                JAVASCRIPT VA A CREAR
+                LAS TARJETAS AQUÍ
+            -->
+            <div
+                id="programa-container"
+                class="cards-grid"
+            >
+            </div>
+
         </section>
+
     </main>
 
-    <!-- Pie de Página -->
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
     <footer id="contacto-funTechIY">
+
         <div class="footer-grid">
+
+
+            <!-- CONTACTO -->
             <div class="contacto">
+
                 <h3>Contacto</h3>
+
                 <address>
+
                     <p>
+
                         <i class="fa fa-map-marker-alt"></i>
-                        <span class="label">Ubicación:</span>
-                        <a href="https://maps.google.com/?q=Plaza+Satélite+Naucalpan" target="_blank" rel="noreferrer noopener">Plaza Satélite, Naucalpan de Juárez, Méx.</a>
+
+                        <span class="label">
+                            Ubicación:
+                        </span>
+
+                        <a
+                            href="https://maps.google.com/?q=Plaza+Satélite+Naucalpan"
+                            target="_blank"
+                            rel="noreferrer noopener"
+                        >
+                            Plaza Satélite, Naucalpan de Juárez, Méx.
+                        </a>
+
                     </p>
+
+
                     <p>
+
                         <i class="fa fa-phone"></i>
-                        <span class="label">Teléfono:</span>
-                        <a href="tel:+525610510602">56 1051 0602</a>
+
+                        <span class="label">
+                            Teléfono:
+                        </span>
+
+                        <a href="tel:+525610510602">
+                            56 1051 0602
+                        </a>
+
                     </p>
+
+
                     <p>
+
                         <i class="fab fa-whatsapp"></i>
-                        <span class="label">WhatsApp:</span>
-                        <a href="https://wa.me/525610510602?text=Hola,%20necesito%20información%20sobre%20servicios%20contables" target="_blank" rel="noreferrer noopener">Enviar mensaje por WhatsApp</a>
+
+                        <span class="label">
+                            WhatsApp:
+                        </span>
+
+                        <a
+                            href="https://wa.me/525610510602?text=Hola,%20necesito%20información%20sobre%20servicios%20contables"
+                            target="_blank"
+                            rel="noreferrer noopener"
+                        >
+                            Enviar mensaje por WhatsApp
+                        </a>
+
                     </p>
+
                 </address>
+
             </div>
-            
+
+
+            <!-- REDES SOCIALES -->
             <div class="redes-sociales">
-                <h3>Síguenos en redes sociales</h3>
+
+                <h3>
+                    Síguenos en redes sociales
+                </h3>
+
                 <div class="redes-iconos">
-                    <a href="https://www.facebook.com" target="_blank" rel="noreferrer noopener" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="https://www.instagram.com" target="_blank" rel="noreferrer noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.tiktok.com" target="_blank" rel="noreferrer noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                    <a href="https://wa.me/525610510602" target="_blank" rel="noreferrer noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+                    <a
+                        href="https://www.facebook.com"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        aria-label="Facebook"
+                    >
+                        <i class="fab fa-facebook"></i>
+                    </a>
+
+
+                    <a
+                        href="https://www.instagram.com"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        aria-label="Instagram"
+                    >
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+
+                    <a
+                        href="https://www.tiktok.com"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        aria-label="TikTok"
+                    >
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+
+
+                    <a
+                        href="https://wa.me/525610510602"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        aria-label="WhatsApp"
+                    >
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+
                 </div>
+
             </div>
+
         </div>
 
+
+        <!-- FOOTER INFERIOR -->
         <div class="footer-bottom">
-            <button onclick="scrollToTop()" class="scroll-to-top-btn" aria-label="Volver al inicio">
+
+            <button
+                onclick="scrollToTop()"
+                class="scroll-to-top-btn"
+                aria-label="Volver al inicio"
+                type="button"
+            >
                 <i class="fa fa-arrow-up"></i>
             </button>
-            <p class="copyright">&copy; 2026 Fernando Contabilidad. Todos los derechos reservados.</p>
+
+
+            <p class="copyright">
+                &copy; 2026 Fernando Contabilidad.
+                Todos los derechos reservados.
+            </p>
+
         </div>
+
     </footer>
 
-    <script>
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-    </script>
-    <script src="script.js"></script>
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="js/script.js"></script>
+
 </body>
 </html>
