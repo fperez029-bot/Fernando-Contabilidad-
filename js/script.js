@@ -1,130 +1,88 @@
-// ==========================================
-// FERNANDO CONTABILIDAD
-// SISTEMA DE TARJETAS Y FILTROS
-// ==========================================
-
-
-// ------------------------------------------
-// 1. INFORMACIÓN DE LAS TARJETAS
-// ------------------------------------------
+/* =========================
+   TARJETAS PRINCIPALES
+   ========================= */
 
 const programas = [
 
     {
-        id: 1,
-        imagen: "img/imagen1.jpg",
         titulo: "Gestión Contable Integral",
-        categoria: "proyectos",
-        descripcion:
-            "Aprende los fundamentos de la contabilidad y conoce las herramientas necesarias para llevar un mejor control financiero."
+        descripcion: "Organización y control de la información contable de empresas.",
+        imagen: "img/imagen1.jpg",
+        categoria: "proyectos"
     },
 
     {
-        id: 2,
-        imagen: "img/imagen2.jpg",
         titulo: "Asesoría Fiscal y Tributaria",
-        categoria: "proyectos",
-        descripcion:
-            "Conoce los principales conceptos fiscales y aprende a comprender mejor tus obligaciones tributarias."
+        descripcion: "Orientación para el correcto cumplimiento de obligaciones fiscales.",
+        imagen: "img/imagen2.jpg",
+        categoria: "proyectos"
     },
 
     {
-        id: 3,
-        imagen: "img/imagen3.jpg",
         titulo: "Cálculo y Declaración de Impuestos",
-        categoria: "proyectos",
-        descripcion:
-            "Aprende los conceptos básicos relacionados con el cálculo y la declaración de impuestos."
+        descripcion: "Apoyo en el cálculo y presentación de declaraciones fiscales.",
+        imagen: "img/imagen3.jpg",
+        categoria: "proyectos"
     },
 
     {
-        id: 4,
-        imagen: "img/imagen4.jpg",
         titulo: "Finanzas Personales y Pymes",
-        categoria: "proyectos",
-        descripcion:
-            "Aprende a administrar mejor tu dinero y conoce herramientas financieras útiles para personas y pequeños negocios."
+        descripcion: "Herramientas para mejorar la administración financiera.",
+        imagen: "img/imagen4.jpg",
+        categoria: "proyectos"
     },
 
     {
-        id: 5,
-        imagen: "img/imagen5.jpg",
         titulo: "Auditoría e Inversiones",
-        categoria: "unete",
-        descripcion:
-            "Conoce los fundamentos de la auditoría y descubre conceptos básicos relacionados con las inversiones."
+        descripcion: "Análisis financiero para tomar mejores decisiones de inversión.",
+        imagen: "img/imagen5.jpg",
+        categoria: "unete"
     },
 
     {
-        id: 6,
-        imagen: "img/imagen6.jpg",
         titulo: "Estrategia de Pagos y Nómina",
-        categoria: "unete",
-        descripcion:
-            "Conoce herramientas para organizar pagos, nóminas y diferentes responsabilidades financieras."
+        descripcion: "Organización eficiente de pagos y obligaciones laborales.",
+        imagen: "img/imagen6.jpg",
+        categoria: "unete"
     },
 
     {
-        id: 7,
-        imagen: "img/imagen7.jpg",
         titulo: "Consultoría de Negocios",
-        categoria: "unete",
-        descripcion:
-            "Aprende conceptos fundamentales para analizar negocios y tomar mejores decisiones financieras."
+        descripcion: "Estrategias financieras para mejorar el funcionamiento empresarial.",
+        imagen: "img/imagen7.jpg",
+        categoria: "unete"
     },
 
     {
-        id: 8,
-        imagen: "img/imagen8.jpg",
         titulo: "Planeación Financiera Avanzada",
-        categoria: "unete",
-        descripcion:
-            "Conoce estrategias de planeación financiera para organizar recursos y establecer objetivos a largo plazo."
+        descripcion: "Planeación y análisis para alcanzar objetivos financieros.",
+        imagen: "img/imagen8.jpg",
+        categoria: "unete"
     }
 
 ];
 
 
-// ------------------------------------------
-// 2. OBTENER ELEMENTOS DEL HTML
-// ------------------------------------------
-
-const container =
-    document.getElementById("programa-container");
-
-const filterButtons =
-    document.querySelectorAll(".filter-btn");
-
-
-// ------------------------------------------
-// 3. FUNCIÓN PARA CREAR UNA TARJETA
-// ------------------------------------------
+/* =========================
+   CREAR TARJETA
+   ========================= */
 
 function crearTarjeta(programa) {
 
-    const tarjeta = document.createElement("figure");
+    const tarjeta = document.createElement("div");
 
     tarjeta.classList.add("proyecto-card");
 
     tarjeta.innerHTML = `
 
-        <div class="img-container">
+        <img
+            src="${programa.imagen}"
+            alt="${programa.titulo}"
+        >
 
-            <img
-                src="${programa.imagen}"
-                alt="${programa.titulo}"
-                loading="lazy"
-            >
+        <div class="proyecto-card-content">
 
-        </div>
-
-
-        <figcaption>
-            ${programa.titulo}
-        </figcaption>
-
-
-        <div class="card-description">
+            <h3>${programa.titulo}</h3>
 
             <p>
                 ${programa.descripcion}
@@ -134,108 +92,104 @@ function crearTarjeta(programa) {
 
     `;
 
-
     return tarjeta;
 }
 
 
-// ------------------------------------------
-// 4. RENDERIZAR TARJETAS
-// ------------------------------------------
+/* =========================
+   MOSTRAR TARJETAS
+   ========================= */
 
-function renderizarProgramas(categoria = "all") {
+function renderizarProgramas(filtro = "todos") {
 
-    // Limpiar las tarjetas anteriores
+    const container =
+        document.getElementById("programa-container");
+
     container.innerHTML = "";
 
 
-    // Filtrar
     const programasFiltrados =
-        categoria === "all"
+        filtro === "todos"
             ? programas
             : programas.filter(
-                programa =>
-                    programa.categoria === categoria
+                programa => programa.categoria === filtro
             );
 
 
-    // Crear cada tarjeta
     programasFiltrados.forEach(programa => {
 
-        const tarjeta =
-            crearTarjeta(programa);
+        const tarjeta = crearTarjeta(programa);
 
         container.appendChild(tarjeta);
 
     });
-
-
-    // Si no hay resultados
-    if (programasFiltrados.length === 0) {
-
-        container.innerHTML = `
-            <p class="no-results">
-                No hay cursos disponibles en esta categoría.
-            </p>
-        `;
-
-    }
-
 }
 
 
-// ------------------------------------------
-// 5. BOTONES DE FILTRO
-// ------------------------------------------
+/* =========================
+   FILTROS
+   ========================= */
 
-filterButtons.forEach(button => {
+document.addEventListener("DOMContentLoaded", function () {
 
-    button.addEventListener("click", () => {
-
-        // Obtener categoría
-        const categoria =
-            button.dataset.category;
+    renderizarProgramas();
 
 
-        // Quitar "active" de todos
-        filterButtons.forEach(btn => {
+    const botonesFiltro =
+        document.querySelectorAll(".filtro-btn");
 
-            btn.classList.remove("active");
+
+    botonesFiltro.forEach(boton => {
+
+        boton.addEventListener("click", function () {
+
+            botonesFiltro.forEach(btn => {
+
+                btn.classList.remove("active");
+
+            });
+
+
+            this.classList.add("active");
+
+
+            const filtro =
+                this.getAttribute("data-filter");
+
+
+            renderizarProgramas(filtro);
 
         });
-
-
-        // Activar botón seleccionado
-        button.classList.add("active");
-
-
-        // Renderizar tarjetas
-        renderizarProgramas(categoria);
 
     });
 
 });
 
 
-// ------------------------------------------
-// 6. MOSTRAR TODAS AL CARGAR LA PÁGINA
-// ------------------------------------------
+/* =========================
+   BOTÓN VOLVER ARRIBA
+   ========================= */
 
-document.addEventListener(
-    "DOMContentLoaded",
-    () => {
+const scrollTopBtn =
+    document.getElementById("scrollTopBtn");
 
-        renderizarProgramas("all");
+
+window.addEventListener("scroll", function () {
+
+    if (window.scrollY > 300) {
+
+        scrollTopBtn.style.display = "block";
+
+    } else {
+
+        scrollTopBtn.style.display = "none";
 
     }
-);
+
+});
 
 
-// ------------------------------------------
-// 7. VOLVER ARRIBA
-// ------------------------------------------
-
-function scrollToTop() {
+scrollTopBtn.addEventListener("click", function () {
 
     window.scrollTo({
 
@@ -245,4 +199,4 @@ function scrollToTop() {
 
     });
 
-}
+});

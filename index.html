@@ -2,317 +2,260 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-
-    <meta name="description" content="Fernando Contabilidad - Servicios contables y asesoría financiera">
-    <meta name="keywords" content="Contabilidad, Finanzas, Impuestos, Asesoría, Fernando Contabilidad">
-    <meta name="author" content="Fernando Pérez Torres">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fernando Contabilidad</title>
 
     <link rel="stylesheet" href="style.css">
 
-    <!-- Font Awesome -->
+    <!-- Iconos -->
     <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <title>Fernando Contabilidad | Asesoría Financiera</title>
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
 
     <!-- =========================
-         HEADER
-    ========================== -->
+         ENCABEZADO
+         ========================= -->
     <header class="headerTechiY">
 
         <div class="logo">
-            <img
-                src="img/logo.jpeg"
-                alt="Fernando Contabilidad"
-            >
+            <img src="img/logo.jpeg" alt="Fernando Contabilidad">
         </div>
 
-        <nav class="nav">
-            <ul>
-                <li>
-                    <a href="#inicio" class="nav-button">Inicio</a>
-                </li>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#fundacion">Acerca de nosotros</a>
 
-                <li>
-                    <a href="#fundacion" class="nav-button">
-                        Acerca de nosotros
-                    </a>
-                </li>
+            <!-- Deloitte -->
+            <a href="https://www.deloitte.com/latam/es/about/story/nuestros-marketplaces/deloitte-mexico.html"
+               target="_blank"
+               rel="noopener noreferrer">
+                Inversiones
+            </a>
 
-                <li>
-                    <a href="#programas" class="nav-button">
-                        Inversiones
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#contacto-funTechIY" class="nav-button">
-                        Contacto
-                    </a>
-                </li>
-            </ul>
+            <!-- PwC -->
+            <a href="https://www.pwc.com/mx/es/"
+               target="_blank"
+               rel="noopener noreferrer">
+                Contacto
+            </a>
         </nav>
 
     </header>
 
 
-    <main>
+    <!-- =========================
+         INICIO / HERO
+         ========================= -->
+    <section id="inicio" class="hero">
 
-        <!-- =========================
-             HERO
-        ========================== -->
-        <section id="inicio" class="hero-fundacion">
+        <video autoplay muted loop playsinline>
+            <source src="video/video.mp4" type="video/mp4">
+            Tu navegador no soporta videos.
+        </video>
 
-            <div class="video-background">
+        <div class="hero-overlay"></div>
 
-                <video autoplay muted loop playsinline>
-                    <source
-                        src="video/video.mp4"
-                        type="video/mp4"
-                    >
+        <div class="hero-content">
 
-                    Tu navegador no soporta video HTML5.
+            <h1>Fernando Contabilidad</h1>
 
-                </video>
+            <p>
+                Soluciones contables y financieras para personas y empresas.
+            </p>
 
-            </div>
+            <div class="hero-buttons">
 
+                <a href="https://www.deloitte.com/latam/es/about/story/nuestros-marketplaces/deloitte-mexico.html"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="hero-btn">
+                    Inversiones
+                </a>
 
-            <div class="hero-content">
-
-                <div class="welcome-box">
-                    <h2>Bienvenidos</h2>
-                </div>
-
-
-                <div class="hero-buttons">
-
-                    <a
-                        href="#programas"
-                        class="btn"
-                    >
-                        Inversiones
-                    </a>
-
-                    <a
-                        href="#contacto-funTechIY"
-                        class="btn"
-                    >
-                        Contacto
-                    </a>
-
-                </div>
+                <a href="https://www.pwc.com/mx/es/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="hero-btn">
+                    Contacto
+                </a>
 
             </div>
 
-        </section>
+        </div>
+
+    </section>
 
 
-        <!-- =========================
-             ACERCA DE NOSOTROS
-        ========================== -->
-        <section
-            id="fundacion"
-            class="fundacion"
-        >
+    <!-- =========================
+         ACERCA DE NOSOTROS
+         ========================= -->
+    <section id="fundacion" class="fundacion">
 
-            <h2>Acerca de nosotros</h2>
+        <h2>Acerca de nosotros</h2>
 
-            <div class="content">
+        <div class="fundacion-content">
 
-                <p>
-                    Fernando Contabilidad es una firma dirigida por
-                    Fernando Pérez Torres dedicada a brindar asesoría
-                    financiera, contable y fiscal integral para optimizar
-                    tus recursos y hacer crecer tu negocio.
-                </p>
+            <p>
+                En Fernando Contabilidad ofrecemos soluciones contables,
+                fiscales y financieras para personas, emprendedores y pequeñas
+                y medianas empresas.
+            </p>
 
+            <p>
+                Nuestro objetivo es facilitar la administración financiera,
+                mejorar la organización contable y ayudar a nuestros clientes
+                a tomar mejores decisiones para alcanzar sus objetivos.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         TARJETAS PRINCIPALES
+         ========================= -->
+    <section id="programas" class="programas">
+
+        <h2>Conoce nuestros servicios</h2>
+
+        <div class="filtros">
+
+            <button class="filtro-btn active" data-filter="todos">
+                Todos
+            </button>
+
+            <button class="filtro-btn" data-filter="proyectos">
+                Proyectos
+            </button>
+
+            <button class="filtro-btn" data-filter="unete">
+                Únete
+            </button>
+
+        </div>
+
+        <div id="programa-container" class="programa-container"></div>
+
+    </section>
+
+
+    <!-- =========================
+         IMÁGENES 9, 10 Y 11
+         SECCIÓN INDEPENDIENTE
+         ========================= -->
+    <section class="seccion-imagenes-extra">
+
+        <h2>Nuestros proyectos</h2>
+
+        <div class="imagenes-extra-container">
+
+            <div class="imagen-extra">
+                <img src="img/imagen9.jpg"
+                     alt="Proceso de gestión financiera">
             </div>
 
-        </section>
-
-
-        <!-- =========================
-             PROGRAMAS / CURSOS
-        ========================== -->
-        <section
-            id="programas"
-            class="programas"
-        >
-
-            <h2>
-                Conoce nuestros cursos para principiantes
-            </h2>
-
-
-            <!-- BOTONES DE FILTRO -->
-            <div class="filter-buttons">
-
-                <button
-                    class="filter-btn active"
-                    data-category="all"
-                    type="button"
-                >
-                    Todos
-                </button>
-
-                <button
-                    class="filter-btn"
-                    data-category="proyectos"
-                    type="button"
-                >
-                    Proyectos
-                </button>
-
-                <button
-                    class="filter-btn"
-                    data-category="unete"
-                    type="button"
-                >
-                    Únete
-                </button>
-
+            <div class="imagen-extra">
+                <img src="img/imagen10.jpg"
+                     alt="Planeación financiera">
             </div>
 
-
-            <!--
-                JAVASCRIPT VA A CREAR
-                LAS TARJETAS AQUÍ
-            -->
-            <div
-                id="programa-container"
-                class="cards-grid"
-            >
+            <div class="imagen-extra">
+                <img src="img/imagen11.jpg"
+                     alt="Inversiones y crecimiento">
             </div>
 
-        </section>
+        </div>
 
-    </main>
+    </section>
+
+
+    <!-- =========================
+         OFERTAS ESPECIALES
+         ========================= -->
+    <section class="ofertas">
+
+        <h2>Ofertas Especiales</h2>
+
+        <p>
+            Durante todo el mes de noviembre, proporcionaremos
+            servicios especializados con promociones especiales.
+        </p>
+
+        <p>
+            Todos los viernes, obtén un <strong>10% de descuento</strong>
+            en asesorías particulares.
+        </p>
+
+    </section>
 
 
     <!-- =========================
          FOOTER
-    ========================== -->
+         ========================= -->
     <footer id="contacto-funTechIY">
 
-        <div class="footer-grid">
+        <div class="footer-container">
 
+            <div class="footer-section">
 
-            <!-- CONTACTO -->
-            <div class="contacto">
+                <h3>Fernando Contabilidad</h3>
 
-                <h3>Contacto</h3>
-
-                <address>
-
-                    <p>
-
-                        <i class="fa fa-map-marker-alt"></i>
-
-                        <span class="label">
-                            Ubicación:
-                        </span>
-
-                        <a
-                            href="https://maps.google.com/?q=Plaza+Satélite+Naucalpan"
-                            target="_blank"
-                            rel="noreferrer noopener"
-                        >
-                            Plaza Satélite, Naucalpan de Juárez, Méx.
-                        </a>
-
-                    </p>
-
-
-                    <p>
-
-                        <i class="fa fa-phone"></i>
-
-                        <span class="label">
-                            Teléfono:
-                        </span>
-
-                        <a href="tel:+525610510602">
-                            56 1051 0602
-                        </a>
-
-                    </p>
-
-
-                    <p>
-
-                        <i class="fab fa-whatsapp"></i>
-
-                        <span class="label">
-                            WhatsApp:
-                        </span>
-
-                        <a
-                            href="https://wa.me/525610510602?text=Hola,%20necesito%20información%20sobre%20servicios%20contables"
-                            target="_blank"
-                            rel="noreferrer noopener"
-                        >
-                            Enviar mensaje por WhatsApp
-                        </a>
-
-                    </p>
-
-                </address>
+                <p>
+                    Soluciones contables y financieras
+                    para personas y empresas.
+                </p>
 
             </div>
 
 
-            <!-- REDES SOCIALES -->
-            <div class="redes-sociales">
+            <div class="footer-section">
 
-                <h3>
-                    Síguenos en redes sociales
-                </h3>
+                <h3>Contacto</h3>
 
-                <div class="redes-iconos">
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Tlalnepantla, Estado de México
+                </p>
 
-                    <a
-                        href="https://www.facebook.com"
-                        target="_blank"
-                        rel="noreferrer noopener"
-                        aria-label="Facebook"
-                    >
-                        <i class="fab fa-facebook"></i>
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+                    Teléfono: 55 0000 0000
+                </p>
+
+                <p>
+                    <i class="fa-brands fa-whatsapp"></i>
+                    WhatsApp
+                </p>
+
+            </div>
+
+
+            <div class="footer-section">
+
+                <h3>Síguenos</h3>
+
+                <div class="social-icons">
+
+                    <a href="https://www.facebook.com/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <i class="fa-brands fa-facebook"></i>
                     </a>
 
-
-                    <a
-                        href="https://www.instagram.com"
-                        target="_blank"
-                        rel="noreferrer noopener"
-                        aria-label="Instagram"
-                    >
-                        <i class="fab fa-instagram"></i>
+                    <a href="https://www.instagram.com/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <i class="fa-brands fa-instagram"></i>
                     </a>
 
-
-                    <a
-                        href="https://www.tiktok.com"
-                        target="_blank"
-                        rel="noreferrer noopener"
-                        aria-label="TikTok"
-                    >
-                        <i class="fab fa-tiktok"></i>
-                    </a>
-
-
-                    <a
-                        href="https://wa.me/525610510602"
-                        target="_blank"
-                        rel="noreferrer noopener"
-                        aria-label="WhatsApp"
-                    >
-                        <i class="fab fa-whatsapp"></i>
+                    <a href="https://www.tiktok.com/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <i class="fa-brands fa-tiktok"></i>
                     </a>
 
                 </div>
@@ -322,22 +265,10 @@
         </div>
 
 
-        <!-- FOOTER INFERIOR -->
         <div class="footer-bottom">
 
-            <button
-                onclick="scrollToTop()"
-                class="scroll-to-top-btn"
-                aria-label="Volver al inicio"
-                type="button"
-            >
-                <i class="fa fa-arrow-up"></i>
-            </button>
-
-
-            <p class="copyright">
-                &copy; 2026 Fernando Contabilidad.
-                Todos los derechos reservados.
+            <p>
+                ©️ 2026 Fernando Contabilidad. Todos los derechos reservados.
             </p>
 
         </div>
@@ -345,9 +276,11 @@
     </footer>
 
 
-    <!-- =========================
-         JAVASCRIPT
-    ========================== -->
+    <!-- Botón subir -->
+    <button id="scrollTopBtn" title="Volver arriba">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
 
     <script src="js/script.js"></script>
 
